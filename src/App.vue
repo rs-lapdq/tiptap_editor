@@ -13,25 +13,28 @@
       </div>
     </v-app-bar>
     <v-main>
-      <text-editor> </text-editor>
-
-      <div>
-        <router-view />
-      </div>
+      <v-btn color="primary" @click="handleSubmitForm">Submit form</v-btn>
+      <text-editor2 v-model="content"> </text-editor2>
+      <pre v-html="content"></pre>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import TextEditor from "./components/TextEditor.vue";
+import TextEditor2 from "./components/TextEditor2.vue";
 export default {
   name: "App",
   components: {
-    TextEditor,
+    TextEditor2,
   },
 
   data: () => ({
-    //
+    content: "",
   }),
+  methods: {
+    handleSubmitForm() {
+      console.log(this.content);
+    },
+  },
 };
 </script>

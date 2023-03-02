@@ -97,7 +97,6 @@ import Highlight from "@tiptap/extension-highlight";
 import Link from "@tiptap/extension-link";
 import StarterKit from "@tiptap/starter-kit";
 import Underline from "@tiptap/extension-underline";
-import UpperCase from "../plugins/Uppercase";
 
 import { RouterLink } from "vue-router";
 
@@ -136,7 +135,6 @@ export default {
         Highlight,
         Link,
         Underline,
-        UpperCase,
       ],
       onUpdate: () => {
         // HTML
